@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "fullNameDriver": "mayara",
+      "clientName": "houyem",
+      "clientaddress":"jbeniena-sfax",
+      "pointDepart":"jbeniena",
+      "pointArrive":"sousse",
+      "time":"45 min",
+      "duration":"45 min"
+
+    },
+    {
+      "id": 2,
+      "fullNameDriver": "houyem",
+      "clientName": "mayara",
+      "clientaddress":"jbeniena-sfax",
+      "pointDepart":"jbeniena",
+      "pointArrive":"sousse",
+      "time":"45 min",
+      "duration":"45 min"
+
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

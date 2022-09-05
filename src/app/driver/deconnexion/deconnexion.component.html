@@ -1,0 +1,41 @@
+<div class="login-box">
+  <h2 style="color: gold">Register</h2>
+  <h6>
+    register yourself
+        </h6>
+  <form>
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="user-box">
+      <input formControlName="fullname" type="text" class="form-control" id="exampleInputPassword1">
+      <label for="exampleInputPassword1" class="form-label">Full Name</label>
+      <span class="text-danger" *ngIf="registerForm.controls['fullname'].dirty && registerForm.hasError('required','fullname')">*Name Id is required</span>
+    </div>
+    <div class="user-box">
+      <input formControlName="mobile" type="number" class="form-control" id="exampleInputPassword1">
+      <label for="exampleInputPassword1" class="form-label">Mobile Number</label>
+      <span class="text-danger" *ngIf="registerForm.controls['mobile'].dirty && registerForm.hasError('required','mobile')">*Mobile Number Id is required</span>
+    </div>
+
+    <div class="user-box">
+      <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <span class="text-danger" *ngIf="registerForm.controls['email'].dirty && registerForm.hasError('required','email')">*Email Id is required</span>
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="user-box">
+      <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <span class="text-danger" *ngIf="registerForm.controls['password'].dirty && registerForm.hasError('required','password')">*Password Id is required</span>
+    
+    </div>
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <button type="submit" [disabled]="!registerForm.valid" >sign up</button> 
+    </a>
+    </form>
+    <a style="color: gold; margin-top: 10px;" routerLink="/connexion">Already registered? Click to Login!</a>
+  </form>
+</div>

@@ -1,0 +1,30 @@
+div{
+    background-image: url('../assets/truck.jpg');
+    height: 700px;
+    padding: 40px;
+    background-position: center;
+    background-size: cover;
+}
+h1{
+    text-align: center;
+
+}
+p{
+    text-align: center;
+}
+body {
+    text-align: center;
+    
+}
+.button { 
+    background-color: #ac1b7b; 
+    border: rgb(8, 8, 104);
+    color: rgb(253, 249, 249); 
+    padding: 15px 100px; 
+    text-align: center; 
+    text-decoration: rgb(187, 47, 47); 
+    display: inline-block;
+    font-size: 30px; 
+    margin: 7px 10px; 
+    cursor: pointer; 
+    } 

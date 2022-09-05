@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<title>Delivery</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<body class="w3-black">
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <br> <br> 
+<a routerLink="/home" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+</a><br> <br> <br> <br> <br> <br> 
+  <a routerLink="/admin" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>Admin</p>
+  </a> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+  <a routerLink="/driver" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>Driver</p>
+  </a>
+ <!-- <a routerlink="/contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>-->
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a routerlink="/home" class="w3-bar-item w3-button" style="width: 25%!important">HOME</a>
+    <a class="w3-bar-item w3-button" routerlink="/admin"  style="width:25% !important">Admin</a>
+    <a routerlink="/driver"  class="w3-bar-item w3-button" style="width:25% !important">Driver</a>
+    <a routerlink="/contact"   class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small"></span> Delivery</h1>
+    <p>Tracking Our Drivers </p>
+    <img src="../../../assets/car.png"  width="300" height="200">
+  </header>
+
+    <!-- Footer -->
+
+
+    <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13075.657913346613!2d10.888829521153264!3d34.983806835801545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1301c6ab84481bf7%3A0x2d28c239851c234b!2sEl%20Amra%20Clean!5e0!3m2!1sen!2stn!4v1643394744110!5m2!1sen!2stn" width="1500" height="400" style="border:10 px;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <i class="fa fa-facebook-official w3-hover-opacity"></i> 
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <!-- End footer -->
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,24 @@
+* {
+    background-image: url(/src/assets/space1.jpg);
+}
+.card {
+    margin-top: 20px;
+    border:darkgoldenrod ;
+    width: 600px;
+    padding: 100px;
+    position:fixed ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgb(126, 33, 103);
+    background: linear-gradient(rgb(134, 49, 99)0%,rgb(0, 0, 0));
+}
+.card h1,h6
+{
+color: rgb(236, 225, 225);
+
+}
+label {
+    color: rgb(223, 210, 210);
+
+}

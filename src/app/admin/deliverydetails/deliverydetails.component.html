@@ -1,0 +1,106 @@
+
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+    <h1 style="color: antiquewhite;">Delivery Details</h1>
+    <div class="d-flex">
+        <button (click)="clickAddCommande()" style="color: rgb(110, 38, 38);"  type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"  class="btn btn-success"> Add Commande</button>
+        <button routerLink="/home" class="btn btn-danger mx-2">Logout</button>
+        </div>
+        </div>
+        </nav>
+        
+        <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13075.657913346613!2d10.888829521153264!3d34.983806835801545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1301c6ab84481bf7%3A0x2d28c239851c234b!2sEl%20Amra%20Clean!5e0!3m2!1sen!2stn!4v1643394744110!5m2!1sen!2stn" width="1500" height="400" style="border:10 px;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
+        <table class="table mt-3">
+            <thead>
+                <tr>
+                    <th scope="col">Driver ID</th>
+                    <th scope="col">NumCin</th>
+                    <th scope="col">Client Name</th>
+                    <th scope="col">Client Address</th>
+                    
+                    <th scope="col">point départ</th>
+                    <th scope="col">point arrivé </th>
+                    <th scope="col">Time </th>
+                    <th scope="col">Client Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of CommandeData">
+                  <td>{{row.id}}</td>
+                  <td>{{row.mobile}}</td>
+                  <td>{{row.ClientName}}</td>
+                  <td>{{row.ClientAddress}}</td>
+                  
+                  <td>{{row.pointdepart}}</td>
+                  <td>{{row.pointarrive}}</td>
+                  <td>{{row.time}}</td>
+                  <td>{{row.DriverFullName}}</td>
+                 <td>
+                    <button (click)="Edit(row)" style="color: rgb(49, 24, 24);" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info">edit</button>
+                    <button (click)="deleteCommande(row)" class="btn btn-danger mx-3">delete</button>
+                </td>
+                </tr>
+            </tbody>
+            </table>
+          
+     <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Commande Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formVa">
+
+            <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Client Name</label>
+                  <input type="text" formControlName="ClientName"  class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Client Address </label>
+                    <input type="text" formControlName="ClientAddress" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Num Cin Driver </label>
+                    <input type="text" formControlName="mobile"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"> point départ</label>
+                    <input type="text" formControlName="pointdepart"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"> point arrive</label>
+                    <input type="text" formControlName="pointarrive"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Time</label>
+            <input type="text" formControlName="time"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                 <i class="bi bi-currency-dollar"></i>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Mobile Client</label>
+                <input type="text" formControlName="DriverFullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <!--<div class="mn-3">
+            <label for="exampleInputEmail1" class="form-label">Duration</label>
+            <input type="text" formControlName="duration"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                 <i class="bi bi-currency-dollar"></i>
+              </div>-->
+  
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" *ngIf="showAdd" (click)="postCommandeDetails()" class="btn btn-primary">ADD</button>
+          <button type="button" *ngIf="showUpdate" (click)="updateDriverDetails()" class="btn btn-primary">update</button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+

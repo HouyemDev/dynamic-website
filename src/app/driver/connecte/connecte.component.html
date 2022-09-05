@@ -1,0 +1,33 @@
+<div class="login-box">
+  <h2 style="color: gold">Login Driver </h2>
+  <h6>
+    please enter your email nd password
+        </h6>
+  <form>
+    <form [formGroup]="connectForm" (ngSubmit)="connecte()">
+    <div class="user-box">
+      <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      <span class="text-danger" *ngIf="connectForm.controls['email'].dirty && connectForm.hasError('required','email')">*Email Id is required</span>
+    </div>
+    <div class="user-box">
+      <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <span class="text-danger" *ngIf="connectForm.controls['password'].dirty && connectForm.hasError('required','password')">*password Id is required</span>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <button type="submit" [disabled]="!connectForm.valid" >Submit</button> 
+    </a>
+    </form>
+    <a style="color: gold; margin-top: 10px;" routerLink="/signupp">New user ? Click to register!</a>
+  </form>
+</div>

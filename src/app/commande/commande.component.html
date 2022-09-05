@@ -1,0 +1,103 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+    <h1 style="color: antiquewhite;">Delivery Details</h1>
+    <div class="d-flex">
+        <button routerLink="/home" class="btn btn-danger mx-2">Logout</button>
+        </div>
+        </div>
+        </nav>
+        <table class="table mt-3">
+            <thead>
+                <tr>
+                    <th scope="col">Driver ID</th>
+                    <th scope="col">NumCin</th>
+                    <th scope="col">Client Name</th>
+                    <th scope="col">Client Address</th>
+                    
+                    <th scope="col">point départ</th>
+                    <th scope="col">point arrivé </th>
+                    <th scope="col">MobileClient </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of CommandeData">
+                  <td>{{row.id}}</td>
+                  <td>{{row.mobile}}</td>
+                  <td>{{row.ClientName}}</td>
+                  <td>{{row.ClientAddress}}</td>
+                  
+                  <td>{{row.pointdepart}}</td>
+                  <td>{{row.pointarrive}}</td>
+                  <td>{{row.DriverFullName}}</td>
+                 
+                  <td>
+                    <button style="background-color: aqua;" type="button" class="btn" (click)="opensweetalert()">Done</button>
+                   </td>
+         
+
+
+                </tr>
+            </tbody>
+            </table>
+            <body>
+
+              <div class="body">
+                <div class="front wheel"></div>
+                <div class="back wheel"></div>
+              </div>
+            
+              <div class="cover">
+                <div class="path"></div>
+              </div>
+              <div class="text">Have a safe drive ...
+                we need you with us
+              </div>
+            
+            </body>
+     <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Commande Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formVa">
+            <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Driver Full Name</label>
+                  <input type="text" formControlName="DriverFullName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Client Name</label>
+                  <input type="text" formControlName="ClientName"  class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Client Address </label>
+                    <input type="text" formControlName="ClientAddress" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">NumCin </label>
+                    <input type="text" formControlName="mobile"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"> point départ</label>
+                    <input type="text" formControlName="pointdepart"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"> point arrive</label>
+                    <input type="text" formControlName="pointarrive"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      
+            </div>
+            <div class="mn-3">
+              <label for="exampleInputEmail1" class="form-label">mobile Client</label>
+              <input type="text" formControlName="duration"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                   <i class="bi bi-currency-dollar"></i>
+                </div>
+  
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+

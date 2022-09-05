@@ -1,0 +1,13 @@
+
+.form-group
+{
+    width: 50%;
+    margin-left: 20%;
+}
+h1 {
+    color: #b52e31;
+    text-shadow:2px 2px moccasin;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 2rem;
+}
